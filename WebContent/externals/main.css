@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0;
+padding:0;
+background-image:url(../Images/adminbg.jpg);
+background-attachment:fixed;
+background-position:center;
+background-size:cover;
+
+}
+
+.no-margin{
+	margin:0 auto;
+	padding:0px;}
+
+
+.header-row1{
+background-color: #fff; 
+background-image: 
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+	height:10%;
+	padding:.5%;
+	
+	}
+	
+.header-row2{
+	background-color:#0CF;
+	height:10%;
+	padding:.5%;
+	box-shadow:2px 2px 10px #333333;
+	-moz-box-shadow:2px 2px 10px #333333;
+	-webkit-box-shadow:2px 2px 10px #333333;
+	border-radius:5px;
+	}
+	
+.sub-container-1{
+	background-color:transparent;
+	height:auto;
+	padding:0px;
+	}
+	
+.sub-container-2{
+	/*//background-color:#39F;*/
+	height:auto;
+	padding:.5%;
+	}
+	
+.login-control{
+	padding:5px;
+	height:310px;
+	color:#FFF;
+	background-color:#333;
+	border-radius:5px;
+	}
+.login-form{
+	
+	height:240px;
+	color:#000;
+	background-color:#fff;
+	border-radius:3px;
+	}	
+	
+.login-control-spacer{
+	padding:5px;
+	height:60px;
+	
+	}	
+	
+.label1{color:#FFF;
+font-weight:600;}	
+.label2{color:#69F;
+font-weight:600;}	
+	
+	
+.nav-buttons1{
+	background-color:#0CF;
+	color:#FFF;
+	border-radius:3px;
+	
+	}	
+a{color:#FFF;
+line-height:25px;
+	text-decoration:none;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight:400;
+	
+	}
+a:hover{
+	text-decoration:none;
+	}	
+.addflightform{
+	margin:0 auto;
+	padding:50px;
+	background-color: rgba(58, 144, 186, 0.7);
+	transform: rotate(0deg) scale(0.959) skew(-9deg) translate(2px);
+-webkit-transform: rotate(0deg) scale(0.959) skew(-9deg) translate(2px);
+-moz-transform: rotate(0deg) scale(0.959) skew(-9deg) translate(2px);
+-o-transform: rotate(0deg) scale(0.959) skew(-9deg) translate(2px);
+-ms-transform: rotate(0deg) scale(0.959) skew(-9deg) translate(2px);
+color:#fff;
+font-family:"MS Serif", "New York", serif, "Segoe UI Emoji";
+font-weight:500;
+text-shadow:0px 0px 3px #00000;
+	box-shadow:0px 10px 10px #333;
+	width:600px;
+	font-size:16px;
+	text-align:center;
+	font-stretch:extra-expanded;
+	
+	}	
+.viewflightform{
+	margin:0 auto;
+	padding:50px;
+	 background-color: rgba(61, 144, 61, 0.7);
+	
+color:#fff;
+font-family:"MS Serif", "New York", serif, "Segoe UI Emoji";
+font-weight:500;
+text-shadow:0px 0px 3px #000000;
+	box-shadow:0px 10px 10px #333;
+	width:850px;
+	font-size:16px;
+	text-align:center;
+	font-stretch:extra-expanded;
+	
+	}		
+	
+	
+	
+	
+	
+	
+	

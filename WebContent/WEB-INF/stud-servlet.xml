@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	
+	<context:annotation-config />
+	<context:component-scan base-package="com.wipro.frs" />
+      
+	<bean id="viewResolver1" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+  <property name="order" value="1" /> 
+  <property name="basename" value="views" /> 
+  </bean>
+	
+
+	<bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="order" value="2" /> 
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1522:orcl" />
+		<property name="username" value="hr" />
+		<property name="password" value="hr" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.wipro.frs.bean.FlightBean</value>
+				<value>com.wipro.frs.bean.ScheduleBean</value>
+				<value>com.wipro.frs.bean.PassengerBean</value>
+				<value>com.wipro.frs.bean.ReservationBean</value>
+				<value>com.wipro.frs.bean.CredentialsBean</value>
+				<value>com.wipro.frs.bean.CreditCardBean</value>
+				<value>com.wipro.frs.bean.ProfileBean</value>
+				<value>com.wipro.frs.bean.RouteBean</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>				
+			</props>
+		</property>
+	</bean>
+
+	
+</beans>
